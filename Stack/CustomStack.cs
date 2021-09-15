@@ -4,18 +4,18 @@ using System.Text;
 
 namespace Stack
 {
-    class CustomStack
+    class CustomStack<T>
     {
         public int top;
-        public string[] items = new string[10];
+        public T[] items = new T[10];
         public int internalIndex = -1;
 
-        public void Push(string word)
+        public void Push(T word)
         {
             items[++internalIndex] = word;
         }
 
-        public string Pop()
+        public T Pop()
         {
             return items[internalIndex--];
         }
